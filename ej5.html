@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla con Alert</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <td id="primeraCelda">Celda 1</td>
+      <td>Celda 2</td>
+      <td>Celda 3</td>
+    </tr>
+    <tr>
+      <td>Celda 4</td>
+      <td>Celda 5</td>
+      <td>Celda 6</td>
+    </tr>
+  </table>
+
+  <script>
+    const primeraCelda = document.querySelector("#primeraCelda");
+    const primeraFila = primeraCelda.parentElement;
+    const celdasPrimerFila = primeraFila.querySelectorAll("td");
+
+    celdasPrimerFila.forEach(celda => {
+      alert(celda.textContent);
+    });
+  </script>
+</body>
+</html>

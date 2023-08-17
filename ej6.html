@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manipulación de DOM</title>
+</head>
+<body>
+  <div id="miDiv">
+    <p>Párrafo 1</p>
+    <p>Párrafo 2</p>
+    <p>Párrafo 3</p>
+  </div>
+
+  <script>
+    const divElement = document.getElementById("miDiv");
+    const ultimoHijo = divElement.lastElementChild;
+
+    let currentElement = ultimoHijo;
+    while (currentElement) {
+      if (currentElement.tagName === "P") {
+        console.log(currentElement.textContent);
+      }
+      currentElement = currentElement.previousElementSibling;
+    }
+  </script>
+</body>
+</html>
